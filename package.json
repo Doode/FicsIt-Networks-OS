@@ -1,0 +1,53 @@
+{
+    "version": "1.2.5",
+    "name": "DevOS",
+    "files": [
+        {
+            "path": "boot/bin/",
+            "file": "mod_buttons.lua"
+        },
+        {
+            "path": "boot/bin/",
+            "file": "mod_events.lua"
+        },
+        {
+            "path": "boot/bin/",
+            "file": "mod_network.lua"
+        },
+        {
+            "path": "boot/bin/",
+            "file": "mod_thread.lua"
+        },
+        {
+            "path": "boot/bin/",
+            "file": "mod_json.lua"
+        },
+        {
+            "path": "boot/bin/",
+            "file": "mod_storage.lua"
+        },
+        {
+            "path": "bootloader/",
+            "bootloader": true,
+            "file": "bios.lua"
+        },
+        {
+            "path": "bootloader/",
+            "bootloader": true,
+            "file": "storage.lua"
+        },
+        {
+            "path": "bootloader/",
+            "bootloader": true,
+            "file": "json.lua"
+        },
+        {
+            "path": "boot/",
+            "file": "os.lua"
+        },
+        {
+            "path": "boot/",
+            "file": "eeprom.lua"
+        }
+    ]
+}
