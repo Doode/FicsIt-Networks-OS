@@ -122,11 +122,7 @@ function installer.install(path, drive, setEEPROM, setBootLoader, restart)
             print("Operating system ["..package.name.." "..package.version.."] found")
             downloadBinaries(http, path, package.files, drive, setBootLoader)
             if(setEEPROM) then
-                local file = filesystem.open("/boot/eeprom.lua", "r")
-                print("settings eeprom")
-                local eeprom = file:read("10000")
-                file:close()
-                computer.setEEPROM(eeprom)
+                computer.setEEPROM("--Copy paste the eeprom.lua file and change drive to your machine id or drive id")
             end
         end)
 
