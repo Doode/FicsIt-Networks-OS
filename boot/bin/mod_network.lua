@@ -23,7 +23,7 @@ function NetworkServer:new(id, name, port, osName, osVersion, biosVersion)
 	local instance = setmetatable({}, self)
 	instance.id = id
 	instance.name = name
-    instance.port = port
+   	instance.port = port
 	instance.osName = osName
 	instance.osVersion = osVersion
 	instance.biosVersion = biosVersion
@@ -106,7 +106,8 @@ function NetworkManager:startListenerThread()
 						if(server == nil) then
 							self:fireEvent(self.EVENT.CONNECT, newServer)
 						elseif(event_data[5] == self.COMMAND.PING_UPDATE) then
-							self:fireEvent(self.EVENT.UPDATE, newServer)
+							--Made change so that PING_UPDATE sends can send a message to another computer
+							self:fireEvent(self.EVENT.UPDATE, event_data[6])
 						end
 					else
 						server:refresh()
