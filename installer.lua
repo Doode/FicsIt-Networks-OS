@@ -123,16 +123,7 @@ function installer.install(path, drive, setEEPROM, setBootLoader, restart)
             downloadBinaries(http, path, package.files, drive, setBootLoader)
             if(setEEPROM) then
 
-                computer.setEEPROM("local drive = "drive"
-local function loadBIOS()
-	filesystem.initFileSystem("/dev")
-	filesystem.mount("/dev/"..drive, "/")
-	filesystem.doFile("bootloader/bios.lua")
-	filesystem.unmount("/")
-end
-loadBIOS()
-bios.autoUpdate()
-bios.loadOS()")
+                computer.setEEPROM(" ")
             end
         end)
 
