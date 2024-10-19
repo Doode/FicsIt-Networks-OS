@@ -123,7 +123,7 @@ function installer.install(path, drive, setEEPROM, setBootLoader, restart)
             downloadBinaries(http, path, package.files, drive, setBootLoader)
             if(setEEPROM) then
 
-                computer.setEEPROM(" ")
+               -- computer.setEEPROM(" ")
             end
         end)
 
