@@ -38,7 +38,7 @@ local function getOSPackage(http, path, json)
 end
 
 local function printDrives()
-    for _, drive in pairs(filesystem.childs("/dev")) do
+    for _, drive in pairs(filesystem.children("/dev")) do
         print("- " .. drive)
     end
 end
